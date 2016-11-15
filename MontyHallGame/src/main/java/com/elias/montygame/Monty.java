@@ -5,7 +5,7 @@ import java.util.Random;
 public class Monty
 {
 	Random regen = new Random();
-	int tests = 1000000;
+	int simulations = 100000;
 	int wins = 0;
 
 	public static void main(String[] args)
@@ -19,13 +19,14 @@ public class Monty
 	// Testing win rate by not switching box
 	public int firstTest()
 	{
-		for (int i = 1; i <= tests; i++)
+		for (int i = 1; i <= simulations; i++)
 		{
 			int box1 = regen.nextInt(3);
 			int box2 = regen.nextInt(3);
 
 			if (box2 == box1)
 				wins++;
+			System.out.println("testing simulation without changing box: " + i );
 		}
 
 		return wins;
@@ -35,7 +36,7 @@ public class Monty
 	public int secondTest()
 	{
 		wins = 0;
-		for (int i = 1; i <= tests; i++)
+		for (int i = 1; i <= simulations; i++)
 		{
 			int box1 = regen.nextInt(3);
 			int box2 = regen.nextInt(3);
@@ -51,6 +52,7 @@ public class Monty
 
 			if (box4 == box1)
 				wins++;
+			System.out.println("testing simulation with changing the box: " + i);
 		}
 		return wins;
 

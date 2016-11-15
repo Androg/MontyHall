@@ -7,7 +7,6 @@
 		Monty monty;
 		monty = new Monty();
 	%>
-	<h2></h2>
 	<p>Winrate by not switching box</p>
 	<%=monty.firstTest()%>
 	<p>Winrate by switching box</p>
