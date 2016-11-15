@@ -1,0 +1,7 @@
+Test to see the output for when the contestant never switches box
+This is how many wins we get out of 1000000: 332334
+Percent win: 0.332334
+
+Test to see the output for when the contestant chooses to switch box 
+This is how many wins out of 1000000: 666945
+Percent win: 0.666945
